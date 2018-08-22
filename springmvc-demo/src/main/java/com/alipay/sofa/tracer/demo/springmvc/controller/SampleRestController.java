@@ -1,5 +1,7 @@
 package com.alipay.sofa.tracer.demo.springmvc.controller;
 
+import com.alipay.sofa.tracer.demo.facade.RpcCallService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,6 +19,9 @@ import java.util.concurrent.atomic.AtomicLong;
 @RestController
 public class SampleRestController {
 
+    @Autowired
+    private RpcCallService rpcCallService;
+
     private static final String TEMPLATE = "Hello, %s!";
 
     private final AtomicLong    counter  = new AtomicLong();
@@ -27,11 +32,12 @@ public class SampleRestController {
      * @return map
      */
     @RequestMapping("/springmvc")
-    public Map<String, Object> springmvc(@RequestParam(value = "name", defaultValue = "SOFATracer SpringMVC DEMO") String name) {
+    public Map<String, Object> springmvc(@RequestParam(value = "name", defaultValue = "SOFATracer") String name) {
         Map<String, Object> resultMap = new HashMap<String, Object>();
         resultMap.put("success", true);
         resultMap.put("id", counter.incrementAndGet());
         resultMap.put("content", String.format(TEMPLATE, name));
+        resultMap.put("rpc", rpcCallService.helloTracer(name));
         return resultMap;
     }
 }

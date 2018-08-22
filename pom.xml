@@ -23,17 +23,22 @@
             <dependency>
                 <groupId>com.alipay.sofa</groupId>
                 <artifactId>httpclient-demo</artifactId>
-                <version>1.0.0</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alipay.sofa</groupId>
                 <artifactId>springmvc-demo</artifactId>
-                <version>1.0.0</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alipay.sofa</groupId>
                 <artifactId>sofarpc-demo</artifactId>
-                <version>1.0.0</version>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>service-facade</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <!-- Non SOFABoot or Non Spring Boot dependency -->
             <dependency>
@@ -85,6 +90,7 @@
     </build>
 
   <modules>
+      <module>service-facade</module>
       <module>httpclient-demo</module>
       <module>springmvc-demo</module>
       <module>sofarpc-demo</module>

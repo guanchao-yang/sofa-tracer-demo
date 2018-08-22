@@ -1,20 +1,20 @@
-package com.alipay.sofa.tracer.demo.springmvc;
+package com.alipay.sofa.tracer.demo.rpc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
 
 /**
- * SpringMvcDemoApplication
+ * RPCDemoApplication
  *
  * @author yangguanchao
  * @since 2018/08/22
  */
 @SpringBootApplication
-@ImportResource({ "classpath:rpc-reference-example.xml" })
-public class SpringMvcDemoApplication {
+@ImportResource({ "classpath:rpc-server-example.xml" })
+public class RPCDemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringMvcDemoApplication.class, args);
+        SpringApplication.run(RPCDemoApplication.class, args);
     }
 }

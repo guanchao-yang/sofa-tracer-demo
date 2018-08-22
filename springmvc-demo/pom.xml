@@ -17,13 +17,19 @@
             <groupId>com.alipay.sofa</groupId>
             <artifactId>tracer-sofa-boot-starter</artifactId>
         </dependency>
+        <!-- facade -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>service-facade</artifactId>
+        </dependency>
+        <!-- RPC -->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>rpc-sofa-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
 </project>
