@@ -23,5 +23,6 @@ public class HttpClientDemoApplication {
         String httpGetUrl = "http://localhost:8080/springmvc";
         String responseStr = httpClientInstance.executeGet(httpGetUrl);
         logger.info("Response is {}", responseStr);
+        Thread.sleep(10 * 1000);
     }
 }
