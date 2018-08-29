@@ -14,13 +14,13 @@
 
     <bean id="smartDataSource" class="com.alipay.sofa.tracer.plugins.datasource.SmartDataSource" init-method="init">
         <property name="delegate" ref="simpleDataSource"/>
-        <!--应用名称 -->
-        <property name="appName" value="SOFATracerDataSource"/>
-        <!--数据库名称 -->
+        <!-- applicationName -->
+        <property name="appName" value="${spring.application.name}"/>
+        <!-- db -->
         <property name="database" value="h2DataSource"/>
-        <!--数据库类型，支持MYSQL, ORACLE-->
+        <!-- type MYSQL, ORACLE-->
         <property name="dbType" value="MYSQL"/>
-        <!--tracer-->
+        <!-- tracer delegate -->
         <property name="clientTracer" ref="clientTracer"/>
     </bean>
 
@@ -32,6 +32,6 @@
         <property name="password" value="123456"/>
     </bean>
 
-    <bean id="clientTracer" class="com.alipay.sofa.tracer.plugins.datasource.tracer.DataSourceClientTracer" />
+    <bean id="clientTracer" class="com.alipay.sofa.tracer.plugins.datasource.tracer.DataSourceClientTracer"/>
 
 </beans>
