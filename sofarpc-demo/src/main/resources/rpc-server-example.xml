@@ -11,4 +11,27 @@
     <sofa:service ref="rpcCallServiceImpl" interface="com.alipay.sofa.tracer.demo.facade.RpcCallService">
         <sofa:binding.bolt/>
     </sofa:service>
+
+    <bean id="smartDataSource" class="com.alipay.sofa.tracer.plugins.datasource.SmartDataSource" init-method="init">
+        <property name="delegate" ref="simpleDataSource"/>
+        <!--应用名称 -->
+        <property name="appName" value="SOFATracerDataSource"/>
+        <!--数据库名称 -->
+        <property name="database" value="h2DataSource"/>
+        <!--数据库类型，支持MYSQL, ORACLE-->
+        <property name="dbType" value="MYSQL"/>
+        <!--tracer-->
+        <property name="clientTracer" ref="clientTracer"/>
+    </bean>
+
+    <!-- dataSource pool -->
+    <bean id="simpleDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" primary="true">
+        <property name="driverClassName" value="org.h2.Driver"/>
+        <property name="url" value="jdbc:h2:~/test"/>
+        <property name="username" value="sofa"/>
+        <property name="password" value="123456"/>
+    </bean>
+
+    <bean id="clientTracer" class="com.alipay.sofa.tracer.plugins.datasource.tracer.DataSourceClientTracer" />
+
 </beans>

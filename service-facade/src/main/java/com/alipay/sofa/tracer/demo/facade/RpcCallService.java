@@ -8,5 +8,5 @@ package com.alipay.sofa.tracer.demo.facade;
  */
 public interface RpcCallService {
 
-    String helloTracer(String param);
+    String helloTracer(String param) throws Exception;
 }

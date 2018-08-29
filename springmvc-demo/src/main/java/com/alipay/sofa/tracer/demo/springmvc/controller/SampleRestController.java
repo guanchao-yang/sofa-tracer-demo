@@ -32,7 +32,7 @@ public class SampleRestController {
      * @return map
      */
     @RequestMapping("/springmvc")
-    public Map<String, Object> springmvc(@RequestParam(value = "name", defaultValue = "SOFATracer") String name) {
+    public Map<String, Object> springmvc(@RequestParam(value = "name", defaultValue = "SOFATracer") String name) throws Exception {
         Map<String, Object> resultMap = new HashMap<String, Object>();
         resultMap.put("success", true);
         resultMap.put("id", counter.incrementAndGet());
