@@ -126,6 +126,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <repositories>
+                <!-- SOFATracer 2.2.0-SNAPSHOT RELEASE In snapshots Repo now -->
                 <repository>
                     <id>ossrh</id>
                     <url>https://oss.sonatype.org/content/repositories/snapshots</url>
