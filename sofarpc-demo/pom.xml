@@ -40,7 +40,6 @@
             <artifactId>zipkin-reporter</artifactId>
         </dependency>
 
-
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>sofa-tracer-datasource-plugin</artifactId>
@@ -49,11 +48,6 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>1.4.193</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.40</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
