@@ -121,7 +121,7 @@
 
     <profiles>
         <profile>
-            <id>snapshot</id>
+            <id>central</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -134,10 +134,10 @@
                     </snapshots>
                 </repository>
                 <repository>
-                    <id> central</id>
-                    <name> Maven Repository Switchboard</name>
-                    <layout> default</layout>
-                    <url> http://repo1.maven.org/maven2</url>
+                    <id>central</id>
+                    <name>Maven Repository Switchboard</name>
+                    <layout>default</layout>
+                    <url>http://repo1.maven.org/maven2</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
@@ -153,8 +153,8 @@
                     </snapshots>
                 </pluginRepository>
                 <pluginRepository>
-                    <id> central</id>
-                    <url> http://repo1.maven.org/maven2</url>
+                    <id>central</id>
+                    <url>http://repo1.maven.org/maven2</url>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
